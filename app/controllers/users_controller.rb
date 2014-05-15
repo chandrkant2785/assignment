@@ -1,9 +1,17 @@
 class UsersController < ApplicationController
-  
+  layout "users"
   	def new
   		@user = User.new
 	end
-
+  def blank
+    
+  end
+  def login
+    
+  end
+  def show
+    
+  end
 	def create
   		@user = User.new(params[:user])
   		if @user.save
@@ -12,4 +20,5 @@ class UsersController < ApplicationController
     		render "new"
   		end
 	end
+
 end

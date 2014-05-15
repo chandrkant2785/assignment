@@ -2,15 +2,29 @@ Assignments::Application.routes.draw do
   get "assignments/new"
 
   get "sessions/new"
-
+  get "users/blank"
+  get "users/buttons"
+  get "users/flot"
+  get "users/forms"
+  get "users/grid"
+  get "users/morris"
+  get "users/login"
+  get "users/morris"
+  get "users/notifications"
+  get "users/panels_wells"
+  get "users/tables"
+  get "users/timeline"
+  get "users/typography"
   get "users/new"
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "log_in" => "sessions#new", :as => "log_in"
   get "sign_up" => "users#new", :as => "sign_up"
-  root :to => "users#new"
+  root :to => "users#index"
   resources :users
   resources :sessions
   resources :assignments
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

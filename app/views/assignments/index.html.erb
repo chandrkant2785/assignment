@@ -13,12 +13,12 @@
 	<th>Description</th>
    </tr>
 <tbody class="table-hover">
-<%@assignment.each do |assign|%>
+<%@assignment.each_with_index do |assign,index|%>
 
- <tr class="success">
+ <tr class="<%if index.even?%>success<%else%>warning<%end%>">
   <td><%=assign.name%></td>
   <td><%=assign.is_assign%></td>
-  <td></td>
+  <td><%if assign.user_id.nil?%>Not Assign <%end%></td>
   <td><%=assign.assign_type%></td>
   <td><%=assign.assign_date%></td>
   <td><%=assign.assign_end_date%></td>
