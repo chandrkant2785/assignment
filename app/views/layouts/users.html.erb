@@ -14,7 +14,9 @@
     <link href="/assets/plugins/morris/morris-0.4.3.min.css" rel="stylesheet" />
    </head>
 <body>
-
+	<%if !current_user.nil?%>
+<%= render :partial=> '/layouts/user_header' %>
+<%end%>
 <%= yield %>
 <% if params[:action]=='login' or params[:action]=='new'%>
     <script src="/assets/plugins/jquery-1.10.2.js"></script>
