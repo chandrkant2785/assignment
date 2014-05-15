@@ -1,0 +1,31 @@
+<h2 class="text-center">Assignments List</h2>
+<hr/>
+<%if !@assignment.nil?%>
+<div class="table-responsive">
+<table class="table table-bordered">
+	<tr class="info"><th>Name</th>
+	
+	<th>Assign</th>
+	<th>Assign Name</th>
+	<th>Type</th>
+	<th>Start Date</th>
+	<th>End Date</th>
+	<th>Description</th>
+   </tr>
+<tbody class="table-hover">
+<%@assignment.each do |assign|%>
+
+ <tr class="success">
+  <td><%=assign.name%></td>
+  <td><%=assign.is_assign%></td>
+  <td></td>
+  <td><%=assign.assign_type%></td>
+  <td><%=assign.assign_date%></td>
+  <td><%=assign.assign_end_date%></td>
+  <td><a hreh="#" class="btn btn-info">view</a></td>
+ </tr>
+ <%end%>
+ <tbody>
+</table>
+</div>
+<%end%>

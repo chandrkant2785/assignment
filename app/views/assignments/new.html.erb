@@ -1,0 +1,26 @@
+<div class="container">
+	<section id="content">
+<h1>Add New Assignment</h1>
+
+<%= form_for @assign do |f| %>
+  <% if @assign.errors.any? %>
+    <div class="error_messages">
+      <h2>Form is invalid</h2>
+      <ul>
+        <% for message in @assign.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div>
+    <%= f.label :name %></div><br />
+    <div><%= f.text_field :name %></div>
+    <div>
+    <%= f.label :description %></div><br />
+    <div><%= f.text_field :description %></div>
+    <div>
+    <%= f.label :assign_type %></div><br />
+    <div><%= f.text_field :assign_type %></div>
+  <div><%= f.submit %></div>
+<% end %>

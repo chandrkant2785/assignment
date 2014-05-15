@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<head>
+  <title>Assignments</title>
+  <%= stylesheet_link_tag    "bootstrap", "bootstrap-theme", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="container">
+
+<%= render :partial=> '/layouts/header' %>
+<%= yield %>
+<%= render :partial=> '/layouts/footer' %>
+</div>
+</body>
+</html>

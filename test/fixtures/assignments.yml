@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  is_assign: false
+  user_id: 1
+  assign_date: 2014-05-15 12:28:36
+  assign_end_date: 2014-05-15 12:28:36
+  type: 
+  description: MyText
+
+two:
+  name: MyString
+  is_assign: false
+  user_id: 1
+  assign_date: 2014-05-15 12:28:36
+  assign_end_date: 2014-05-15 12:28:36
+  type: 
+  description: MyText
